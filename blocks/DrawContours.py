@@ -9,4 +9,4 @@ class DrawContours(Block):
 
     def operation(self):
         contours = self.input[1]
-        return cv2.drawContours(self.orig_image.copy(), contours, -1, (0, 255, 0))
+        return cv2.drawContours(self.orig_image.copy(), contours, -1, (0, 0, 255), 2)
