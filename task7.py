@@ -13,8 +13,8 @@ original_image = cv2.imread("cards.png")
 ImageProcessor(
     [
         Canny(82, 255),
-        MorphClose(),
-        MorphOpen(),
+        MorphClose(1),
+        MorphOpen(0),
         FindContours(),
         ChoseContour(),
         DrawContours(original_image),
