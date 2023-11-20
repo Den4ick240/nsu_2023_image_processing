@@ -1,0 +1,46 @@
+{
+  "configurations": [
+    {
+      "name": "task11 graphcut",
+      "type": "python",
+      "request": "launch",
+      "program": "./task11_graphcut.py"
+    },
+    {
+      "name": "task12 mnist",
+      "type": "python",
+      "request": "launch",
+      "program": "./task12_mnist.py"
+    },
+    {
+      "name": "task7 canny",
+      "type": "python",
+      "request": "launch",
+      "program": "./task7.py"
+    },
+    {
+      "name": "task8 lines",
+      "type": "python",
+      "request": "launch",
+      "program": "./task8.py"
+    },
+    {
+      "name": "task9 corners features",
+      "type": "python",
+      "request": "launch",
+      "program": "./task9.py"
+    },
+    {
+      "name": "task10 matching",
+      "type": "python",
+      "request": "launch",
+      "program": "./task10.py"
+    },
+    {
+      "name": "task11 watershed",
+      "type": "python",
+      "request": "launch",
+      "program": "./task11_watershed.py"
+    }
+  ]
+}
