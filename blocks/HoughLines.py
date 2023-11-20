@@ -18,8 +18,8 @@ class HoughLines(Block):
             [
                 Tracker("param1", 50, high=100),
                 Tracker("param2", 30, high=100),
-                Tracker("minRadius", 0, high=100),
-                Tracker("maxRadius", 0, high=100),
+                Tracker("minRadius", 10, high=100),
+                Tracker("maxRadius", 100, high=100),
                 Tracker("dp", 1, high=100),
                 Tracker("minDst", 20, high=100),
             ]

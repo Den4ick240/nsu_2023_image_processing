@@ -18,9 +18,6 @@ class Block:
         self.isOn = False
         return self
 
-    def get_adjusted_kernel_size(self, kernel_size):
-        return kernel_size
-
     def add_trackers(self, tracker):
         if type(tracker) is list:
             return map(self.add_trackers, tracker)
@@ -51,11 +48,10 @@ class Block:
             self.next_block.update()
 
     def show_images(self):
-        window_name = self.window_name()
         image = self.image_to_show()
         if image is None:
             return
-        cv2.imshow(window_name, image)
+        cv2.imshow(self.window_name(), image)
         if not self.trackbar_created:
             self.create_trackbars()
             self.trackbar_created = True
@@ -132,3 +128,65 @@ class CompositeBlock(Block):
     def remove_window(self):
         for block in self.blocks:
             block.remove_window()
+
+
+class ForkInnerNext:
+    def __init__(self, parent):
+        self.parent = parent
+
+    def update(self):
+        self.parent.on_update()
+
+
+# class Fork(Block):
+#     def __init__(self, block1, block2):
+#         super().__init__()
+#         self.block1 = block1
+#         self.block2 = block2
+#         self.next = ForkInnerNext()
+#
+#     def remove_window(self):
+#         self.block1.remove_window()
+#         self.block2.remove_window()
+#
+#     def init(self, num, next_block=None):
+#         self.block1.init("1 + " + num, self.next)
+#         self.block2.init("2 + " + num, self.next)
+#         self.num = num
+#         self.next_block = next_block
+#
+#     def set_args(self, args):
+#         self.args = args
+#         self.block1.set_args(args)
+#         self.block2.set_args(args)
+#
+#     def show_images(self):
+#         super().show_images(self)
+#         self.block1.show_images()
+#         self.block2.show_images()
+#
+#     def update(self):
+#         if self.isOn:
+#             self.res = self.operation()
+#         else:
+#             self.res = self.off_operation()
+#         if self.next_block is not None:
+#             self.next_block.input = self.res
+#             self.next_block.update()
+#
+#     def image_to_show(self):
+#         return np.zeros((1, 1, 1))
+#
+#     def show_images_recur(self):
+#         self.show_images()
+#         if self.next_block is not None:
+#             self.next_block.show_images_recur()
+#
+#     def operation(self):
+#         pass
+#
+#     def off_operation(self):
+#         return self.input
+#
+#     def window_name(self):
+#         return f"Step {self.num} {self.name}"
