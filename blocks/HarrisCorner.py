@@ -1,8 +1,7 @@
-from email.mime import image
 import numpy as np
 import cv2
 from blocks import Block
-from blocks.trackers import FloatTracker, Tracker
+from blocks.trackers import FloatTracker, Tracker, EvenTracker
 
 
 class HarrisCorners(Block):
@@ -10,9 +9,9 @@ class HarrisCorners(Block):
         super().__init__()
         (self.block_size, self.ksize, self.k, self.threshold) = self.add_trackers(
             [
-                Tracker("block_size", 2, high=5),
-                Tracker("ksize", 3, high=5),
-                FloatTracker("k", 0.04, 0.2, 0.01),
+                Tracker("block_size", 2, high=20),
+                EvenTracker("ksize", 3, high=10),
+                FloatTracker("k", 0.04, 0.5, 0.01),
                 FloatTracker("threshold", 0.01, 0.2, 0.001),
             ]
         )

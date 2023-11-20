@@ -2,8 +2,6 @@ import cv2
 from blocks import Block, Tracker, FloatTracker
 import numpy as np
 
-from blocks.trackers import FloatTracker
-
 
 class ShiTomachi(Block):
     def __init__(self):
