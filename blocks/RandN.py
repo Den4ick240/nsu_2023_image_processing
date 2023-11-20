@@ -7,8 +7,8 @@ class RandN(Block):
         super().__init__()
         self.mean, self.stddev = self.add_trackers(
             [
-                Tracker("mean", mean, high=255),
-                Tracker("stddev", stddev, high=255),
+                Tracker("mean", mean, high=500),
+                Tracker("stddev", stddev, high=500),
             ]
         )
 

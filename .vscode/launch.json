@@ -41,6 +41,12 @@
       "type": "python",
       "request": "launch",
       "program": "./task11_watershed.py"
+    },
+    {
+      "name": "task13",
+      "type": "python",
+      "request": "launch",
+      "program": "./task13.py"
     }
   ]
 }

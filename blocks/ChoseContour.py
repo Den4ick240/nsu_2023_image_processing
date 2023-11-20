@@ -46,7 +46,8 @@ class ChoseContour(Block):
         return img, selected_contour
 
     def get_area_persent(self):
-        area = cv2.contourArea(self.selected_contour)
+        hull = cv2.convexHull(self.selected_contour)
+        area = cv2.contourArea(hull)
         height, width = self.input[0].shape[:2]
         img_area = height * width
         return area / img_area * 100.0
