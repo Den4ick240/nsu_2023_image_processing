@@ -15,7 +15,9 @@ class MatchTemplate(Block):
         bottom_right = (top_left[0] + w, top_left[1] + h)
         img = self.input.copy()
         cv2.rectangle(img, top_left, bottom_right, 255, 2)
-        return res, img
+        left, top = top_left
+        right, bottom = bottom_right
+        return res, img, (top, bottom, left, right)
 
     def show_images(self):
         cv2.imshow(self.window_name() + "rect", self.res[1])

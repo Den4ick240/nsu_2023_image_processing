@@ -4,49 +4,91 @@
       "name": "task11 graphcut",
       "type": "python",
       "request": "launch",
-      "program": "./task11_graphcut.py"
+      "program": "./task11_graphcut.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task12 mnist",
       "type": "python",
       "request": "launch",
-      "program": "./task12_mnist.py"
+      "program": "../task12_mnist.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task7 canny",
       "type": "python",
       "request": "launch",
-      "program": "./task7.py"
+      "program": "../task7.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task8 lines",
       "type": "python",
       "request": "launch",
-      "program": "./task8.py"
+      "program": "../task8.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task9 corners features",
       "type": "python",
       "request": "launch",
-      "program": "./task9.py"
+      "program": "../task9.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task10 matching",
       "type": "python",
       "request": "launch",
-      "program": "./task10.py"
+      "program": "../task10.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task11 watershed",
       "type": "python",
       "request": "launch",
-      "program": "./task11_watershed.py"
+      "program": "../task11_watershed.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     },
     {
       "name": "task13",
       "type": "python",
       "request": "launch",
-      "program": "./task13.py"
+      "program": "../task13.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
+    },
+    {
+      "name": "task14",
+      "type": "python",
+      "request": "launch",
+      "program": "../task14.py",
+      "cwd": "./images",
+      "env": {
+        "PYTHONPATH": ".."
+      }
     }
   ]
 }
