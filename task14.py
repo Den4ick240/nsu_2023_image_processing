@@ -77,13 +77,13 @@ def get_digit(img):
 
 template = cv2.imread("dota_template.png")
 for original_image_name in [
-    # "dota1.jpg",
-    # "dota2.jpg",
-    # "dota3.jpg",
-    # "dota4.jpg",
-    # "dota5.jpg",
-    # "dota6.jpg",
-    "dota11.jpg"
+    "dota1.jpg",
+    "dota2.jpg",
+    "dota3.jpg",
+    "dota4.jpg",
+    "dota5.jpg",
+    "dota6.jpg",
+    "dota11.jpg",
 ]:
     original_image = cv2.imread(original_image_name)
     ImageProcessor(
